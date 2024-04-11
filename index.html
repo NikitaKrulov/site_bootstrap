@@ -22,7 +22,8 @@
           <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
         </ul>
-        <button class="btn btn-outline-primary" type="submit">Войти</button>
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+          data-bs-target="#loginModal">Войти</button>
       </div>
     </div>
 
@@ -31,7 +32,7 @@
   <main class="main">
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner ">
-        <div class="carousel-item active " data-interval="100">
+        <div class="carousel-item active ">
           <img src="./img/scale_1200.jpg" class="d-block w-100" alt="...">
           <div class="custom container">
 
@@ -39,23 +40,23 @@
             <p class="display-6 fw-bold">Unic Trans то что Вам нужно!</p>
           </div>
         </div>
-        <div class="carousel-item " data-interval="100">
-          <img src="./img/30821006-технологии-и-инновации-фон-идея-глобальной-бизнес.jpg" class="d-block w-100"
-            alt="...">
+        <div class="carousel-item " ">
+          <img src=" ./img/30821006-технологии-и-инновации-фон-идея-глобальной-бизнес.jpg" class="d-block w-100"
+          alt="...">
           <div class="custom container">
             <h1 class="display-5 fw-bold">Вам нужены инновационные технологические решения?</h1>
             <p class="display-6 fw-bold">Unic Trans то что Вам нужно!</p>
           </div>
 
         </div>
-        <div class="carousel-item " data-interval="100">
+        <div class="carousel-item ">
           <img src="./img/scale_1200.jpg" class="d-block w-100" alt="...">
           <div class="custom container">
             <h1 class="display-5 fw-bold">Вам нужены инновационные технологические решения?</h1>
             <p class="display-6 fw-bold">Unic Trans то что Вам нужно!</p>
           </div>
         </div>
-        <div class="carousel-item " data-interval="100">
+        <div class="carousel-item ">
           <img src="./img/30821006-технологии-и-инновации-фон-идея-глобальной-бизнес.jpg" class="d-block w-100"
             alt="...">
           <div class="custom container">
@@ -79,7 +80,7 @@
               <p class="card-text">Кому подойдет: Этот курс подойдет тем, кто хочет научиться создавать инновационные
                 технические решения для своего бизнеса или организации.</p>
               <h5 class="card-title mb-5">Цена от: 1500 Р</h5>
-              <a href="#" class="btn btn-primary">Купить курс</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Купить курс</a>
             </div>
           </div>
         </div>
@@ -93,7 +94,7 @@
               <p class="card-text">Кому подойдет: Этот курс подойдет тем, кто хочет научиться создавать инновационные
                 технические решения для своего бизнеса или организации.</p>
               <h5 class="card-title mb-5">Цена от: 1500 Р</h5>
-              <a href="#" class="btn btn-primary">Купить курс</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Купить курс</a>
             </div>
           </div>
         </div>
@@ -107,7 +108,7 @@
               <p class="card-text">Кому подойдет: Этот курс подойдет тем, кто хочет научиться создавать инновационные
                 технические решения для своего бизнеса или организации.</p>
               <h5 class="card-title mb-5">Цена от: 1500 Р</h5>
-              <a href="#" class="btn btn-primary">Купить курс</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Купить курс</a>
             </div>
           </div>
         </div>
@@ -198,16 +199,64 @@
     </div>
   </footer>
 
+  <!-- buy modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Спасибо за покупку!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Ваш курс успешно приобретен.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <a href="#" class="btn btn-primary">Продолжить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- login modal-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введите ваш email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Пароль</label>
+              <input type="password" class="form-control" id="password" placeholder="Введите ваш пароль">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Войти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
     var carousel = document.getElementById('carouselExampleInterval');
     var carouselObj = new bootstrap.Carousel(carousel, {
-      interval: 100,
-      wrap: false
+      wrap: true
     });
     carousel.addEventListener('click', function (event) {
       if (event.clientX < window.innerWidth / 2) {
