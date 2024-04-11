@@ -1,0 +1,53 @@
+.custom {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    color: #ffffff;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    @media (max-width:992px) {
+        h1{
+            font-size: 35px;
+        }
+        p{
+            font-size: 23px;
+        }
+    }
+    @media (max-width:768px) {
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 28px;
+        }
+    }
+    @media (max-width:600px) {
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+
+}
+
+.icon {
+    padding: 20px;
+    background-color: rgb(218, 219, 253);
+    border-radius: 10px;
+    width: 65px;
+    margin: 0 auto;
+}
+.minW-1{
+    min-width: 200px;
+}
+.navbar-brand{
+    @media (max-width:600px) {
+        img{
+            width: 150px;
+        }
+    }
+}
